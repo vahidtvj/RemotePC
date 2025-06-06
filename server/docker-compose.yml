@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mqtt-nginx:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"     # Nginx port
+    environment:
+      - WSTUNNEL_SECRET=abc
